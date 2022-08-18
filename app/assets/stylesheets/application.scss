@@ -1,19 +1,36 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- */
-
 @import "bootstrap";
 
-.center {
-    text-align: center
+.navbar {
+    background-color: black !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+#logo {
+    font-family: proxima-nova, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    float: left;
+    font-size: 1.5em;
+    line-height: 1.4;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.jumbotron {
+    background-image: asset-url('jumbo-copy-2.jpg');
+    background-position: center center;
+    background-repeat: cover;
+    background-size: cover;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 10px black;
+}
+
+.bg-color {
+    background-color: #e9e9e9;
 }

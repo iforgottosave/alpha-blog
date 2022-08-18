@@ -1,7 +1,33 @@
-<h1>Showing article details</h1>
-<p><strong>Title: </strong><%= @article.title =%></p>
-<p><strong>Description: </strong><%= @article.description =%></p>
+<h2 class="text-center mt-4"><%= @article.title %></h2>
 
-<p><%= button_to 'Edit', edit_article_path(@article), method: :get %></p>
-<p><%= button_to 'Delete', article_path(@article), method: :delete, form: { data: { turbo_confirm: "Are you sure you want to delete?" }} %></p>
-<p><%= button_to 'Return to articles listing', articles_path, method: :get %></p>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-8 mt-2">
+      <div class="text-center">
+        <h5 class="btn btn-success"><%= link_to 'Create a new article', new_article_path, class: "text-white text-decoration-none" %></h5>
+        <h5 class="btn btn-primary"><%= link_to 'Return to articles', articles_path, class: "text-white text-decoration-none" %></h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+    <div class="justify-content-md-center">
+      <div class="col-8 mx-auto">
+        <div class="card text-center shadow mt-3 mb-5 bg-white rounded">
+          <div class="card-header fst-italic">
+            by Denis Chernyavsky
+          </div>
+          <div class="card-body">
+            <div class="card-text text-start"><%= simple_format(@article.description) %></div>
+            <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-primary" %>
+            <%= link_to 'Delete', article_path(@article), class: "btn btn-danger", data: { "turbo-method": :delete, "turbo_confirm": "Are you sure you wish to delete?" } %>
+          </div>
+
+          <div class="card-footer text-muted">
+            <small> Created <%= time_ago_in_words(@article.created_at) %> ago, edited <%= time_ago_in_words(@article.updated_at) %> ago</small>
+          </div
+        </div>
+      </div>
+    </div>
+</div>

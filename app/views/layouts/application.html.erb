@@ -6,12 +6,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "bootstrap", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column bg-color">
+    <%= render 'layouts/navigation' %>
     <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 </html>
+
+<div class="container">
+  <footer class="py-3 my-4">
+    <p class="text-center text-muted">© 2022 Denis Chernyavsky</p>
+  </footer>
+</div>

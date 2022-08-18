@@ -1,6 +1,10 @@
-<h1 class="center">AlphaBlog</h1>
-<p class="center">This is the home page<br>for the AlphaBlog project!</p>
+<div class="container py-4">
+  <div class="jumbotron p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5 text-center text-white">
+      <h1 class="display-5 fw-bold text-shadow">Alpha Blog</h1>
+      <p class="fs-4 text-shadow">Welcome to the home of the <b>ALPHA BLOG</b> project!</p>
+      <button class="btn btn-light btn-lg" type="button" href="#">Join</button>
+    </div>
+  </div>
+</div>
 
-<div class="center"><%= button_to 'View your articles', articles_path, method: :get %></div>
-<br>
-<div class="center"><%= button_to 'About', about_path, method: :get %></div>
