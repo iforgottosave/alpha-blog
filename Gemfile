@@ -26,7 +26,7 @@ gem "jbuilder"
 
 gem 'bootstrap', '~> 5.1.3'
 
-gem 'webpacker', '~> 5.4', '>= 5.4.3'
+# gem 'webpacker', '~> 5.4', '>= 5.4.3'
 
 gem 'turbolinks', '~> 5.2', '>= 5.2.1'
 
