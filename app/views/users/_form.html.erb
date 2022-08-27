@@ -31,7 +31,7 @@
         <br>
 
         <div class="form-group row justify-content-center">
-          <%= f.submit "Join", class: "btn btn-primary btn-lg shadow" %>
+          <%= f.submit(@user.new_record? ? "Join" : "Update", class: "btn btn-primary btn-lg shadow") %>
         </div>
 
         <br>
