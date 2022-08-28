@@ -16,7 +16,8 @@
       <div class="col-8 mx-auto">
         <div class="card text-center shadow mt-3 mb-5 bg-white rounded">
           <div class="card-header fst-italic">
-            by Denis Chernyavsky
+            by <%= @article.user.username %>
+            <%= link_to gravatar_for(@article.user, size: 24), user_path(@article.user) %>
           </div>
           <div class="card-body">
             <div class="card-text text-start"><%= simple_format(@article.description) %></div>
