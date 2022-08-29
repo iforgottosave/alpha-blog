@@ -32,6 +32,10 @@ gem 'turbolinks', '~> 5.2', '>= 5.2.1'
 
 gem 'saas', '~> 0.1.1'
 
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
+
+gem 'pagy', '~> 5.10', '>= 5.10.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
