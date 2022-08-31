@@ -24,7 +24,10 @@
       </ul>
 
       <li class="navbar-nav mb-2 me-1 mb-lg-0 nav-item dropdown">
+
+        <%= link_to "Create", new_article_path, class: "nav-link" %>
         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account </a>
+
         <ul class="dropdown-menu">
           
           <% if logged_in? %>
