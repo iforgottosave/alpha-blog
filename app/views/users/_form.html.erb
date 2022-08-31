@@ -3,6 +3,7 @@
     <div class="col-10">
       <%= render 'shared/errors', obj: @user %>
       <%= form_with(model: @user, local: true) do |f| %>
+
         <div class="form-group row">
           <%= f.label :username, class: "col-2 col-form-label" %>
           <div class="col-10">
@@ -40,7 +41,7 @@
     </div>
     
     <div class="text-center">
-      <%= link_to 'Cancel', users_path, class: "btn btn-danger shadow" %>
+      <%= link_to 'Cancel', articles_path, class: "btn btn-danger shadow" %>
     </div>
   </div>
 </div>
