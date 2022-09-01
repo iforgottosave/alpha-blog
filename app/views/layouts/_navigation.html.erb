@@ -10,6 +10,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
+        <% if !logged_in? %>
+          <%= link_to "Join", join_path, class: "nav-link" %>
+        <% end %>
+
         <%= link_to "Articles", articles_path, class: "nav-link" %>
 
         <li class="nav-item">

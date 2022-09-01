@@ -43,5 +43,13 @@
     <div class="text-center">
       <%= link_to 'Cancel', users_path, class: "btn btn-danger shadow" %>
     </div>
+
+    
+    <div class="mt-4 text-center">
+      <% if logged_in? %>
+        <%= link_to 'Delete my account', user_path(current_user), class: "text-decoration-none text-danger", method: :delete, data: { "turbo-method": :delete, "turbo_confirm": "Delete account?" }%>
+      <% end %>
+    </div>
+
   </div>
 </div>
