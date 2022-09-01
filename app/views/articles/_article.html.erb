@@ -10,8 +10,10 @@
             <h5 class="btn btn-outline-success card-title"><%= link_to article.title, article_path(article), class: "text-dark text-decoration-none"%></h5>
             <p class="card-text"><%= truncate(article.description, length: 100) %></p>
             <%= link_to 'View', article_path(article), class: "btn btn-success" %>
-            <%= link_to 'Edit', edit_article_path(article), class: "btn btn-primary" %>
-            <%= link_to 'Delete', article_path(article), class: "btn btn-danger", data: { "turbo-method": :delete, "turbo_confirm": "Are you sure you wish to delete?" } %>
+            <% if logged_in? && article.user == current_user %>
+              <%= link_to 'Edit', edit_article_path(article), class: "btn btn-primary" %>
+              <%= link_to 'Delete', article_path(article), class: "btn btn-danger", data: { "turbo-method": :delete, "turbo_confirm": "Are you sure you wish to delete?" } %>
+            <% end %>
           </div>
 
           <div class="card-footer text-muted">
