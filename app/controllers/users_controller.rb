@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    session[:user_id] = nil
+    session[:user_id] = nil if @user == current_user
     flash[:notice] = "Account deleted"
     redirect_to root_path
   end
@@ -52,10 +52,12 @@ class UsersController < ApplicationController
 
     def set_user
       @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to root_path, :flash => { :error => "User not found" }
     end
 
     def require_same_user
-      if current_user != @user
+      if current_user != @user && !current_user.admin?
         flash[:alert] = "Permission denied"
         redirect_to @user
       end

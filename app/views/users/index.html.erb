@@ -16,6 +16,11 @@
             <% if logged_in? && user == current_user %>
               <%= link_to 'Edit profile', edit_user_path(user), class: "btn btn-primary" %>
             <% end %>
+
+            <% if logged_in? && current_user.admin? %>
+              <%= link_to 'Remove', user_path(user), class: "btn btn-danger", data: { "turbo-method": :delete, "turbo_confirm": "Are you sure you wish to remove this user?" } %>
+            <% end %>
+
           </div>
 
           <div class="card-footer text-muted">

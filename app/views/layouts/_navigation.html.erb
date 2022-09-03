@@ -29,7 +29,12 @@
         <% if logged_in? %>
           <%= link_to "Create", new_article_path, class: "nav-link" %>
         <% end %>
+
         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account </a>
+
+        <% if logged_in? && current_user.admin %>
+          <div class="nav-link">⭐</div>
+        <% end %>
 
         <ul class="dropdown-menu">
           <% if logged_in? %>

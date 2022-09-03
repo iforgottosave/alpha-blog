@@ -10,10 +10,14 @@
           </div>
           <div class="card-body">
             <div class="card-text text-start"><%= simple_format(@article.description) %></div>
-            <%= link_to 'Return to Articles', articles_path, class: "btn btn-success" %>
+            <%= link_to 'Go Back', articles_path, class: "btn btn-success" %>
             <% if logged_in? && @article.user == current_user %>
               <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-primary" %>
+
+            <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
               <%= link_to 'Delete', article_path(@article), class: "btn btn-danger", data: { "turbo-method": :delete, "turbo_confirm": "Are you sure you wish to delete?" } %>
+            <% end %>
+
             <% end %>
           </div>
           
