@@ -1,0 +1,29 @@
+<h1 class="text-center mt-4 mb-4">New Category</h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-10">
+      <%= render 'shared/errors', obj: @category %>
+      <%= form_with(model: @category, local: true) do |f| %>
+
+        <div class="container form-group col-6">
+          <%= f.text_field :name, class: "form-control shadow", placeholder: "Enter category" %>
+        </div>
+
+        <br>
+
+        <div class="container form-group col-6 text-center">
+          <%= f.submit class: "btn btn-primary btn-lg shadow" %>
+        </div>
+
+        <br>
+
+      <% end %>
+    </div>
+    
+    <div class="text-center">
+      <%= link_to 'Cancel', articles_path, class: "btn btn-danger shadow" %>
+    </div>
+
+  </div>
+</div>
