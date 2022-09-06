@@ -36,16 +36,6 @@ gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 
 gem 'pagy', '~> 5.10', '>= 5.10.1'
 
-gem 'github-pages', '~> 227'
-
-gem 'kramdown', '~> 2.3', '>= 2.3.2'
-
-gem 'addressable', '~> 2.8', '>= 2.8.1'
-
-gem 'jekyll', '~> 3.9', '>= 3.9.2'
-
-gem 'i18n', '~> 1.12'
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
