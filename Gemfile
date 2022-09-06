@@ -38,6 +38,12 @@ gem 'pagy', '~> 5.10', '>= 5.10.1'
 
 gem 'github-pages', group: :jekyll_plugins
 
+gem "kramdown", ">= 2.3.0"
+
+gem "addressable", ">= 2.8.0"
+
+gem "jekyll", ">= 3.6.3"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
