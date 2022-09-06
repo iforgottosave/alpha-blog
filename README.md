@@ -6,4 +6,5 @@ https://alpha-blog-701.herokuapp.com
 Heroku working, commit: "Install rails_12factor"
 
 heroku pg:reset
+
 heroku run rake db:migrate
