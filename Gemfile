@@ -36,6 +36,8 @@ gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 
 gem 'pagy', '~> 5.10', '>= 5.10.1'
 
+gem 'github-pages', group: :jekyll_plugins
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
