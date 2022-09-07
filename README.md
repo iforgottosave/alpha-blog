@@ -1,6 +1,6 @@
 # alpha-blog
 
-https://alpha-blog-701.herokuapp.com
+https://alpha-blog-702.herokuapp.com
 
 If Heroku is not working, try:
 
