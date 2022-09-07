@@ -40,4 +40,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_230737) do
     t.string "password_digest"
     t.boolean "admin", default: false
   end
+
 end
