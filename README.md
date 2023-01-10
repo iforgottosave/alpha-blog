@@ -40,5 +40,5 @@ Then:
 
 3. Add remote:
 
-	heroku git:remote -a your_app_name
+	heroku git:remote -a <your_app_name>
 
